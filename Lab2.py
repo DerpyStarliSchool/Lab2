@@ -15,11 +15,21 @@ def average(x):
     average = sum(x)/len(x)
     print(f"The average is {average}")
 
-def minmax(y):
-    minimum = min(y)
-    maximum = max(y)
+def minmax(x):
+    minimum = min(x)
+    maximum = max(x)
     print(f"The minimum is {minimum}")
     print(f"The maximum is {maximum}")
+
+def median(x):
+    x.sort()
+    n = len(x)
+    m= n//2
+    if n%2 == 0:
+        median = (x[m-1]+x[m])/2
+    else:
+        median = x[m]
+    print(f"The median is {median}")
 
 def main():
     print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
@@ -27,6 +37,7 @@ def main():
     num_list = get_user_input()
     average(num_list)
     minmax(num_list)
+    median(num_list)
 
 if __name__ == "__main__":
     main()
