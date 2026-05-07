@@ -14,12 +14,14 @@ def get_user_input():
 def average(x):
     average = sum(x)/len(x)
     print(f"The average is {average}")
+    return average
 
 def minmax(x):
     minimum = min(x)
     maximum = max(x)
     print(f"The minimum is {minimum}")
     print(f"The maximum is {maximum}")
+    return minimum, maximum
 
 def median(x):
     x.sort()
@@ -30,6 +32,7 @@ def median(x):
     else:
         median = x[m]
     print(f"The median is {median}")
+    return median
 
 def main():
     print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
